@@ -1329,6 +1329,39 @@ func TestOrganization_String(t *testing.T) {
 	}
 }
 
+func TestOrganizationBudget_String(t *testing.T) {
+	t.Parallel()
+	v := OrganizationBudget{
+		ID:                  new(""),
+		BudgetType:          new(""),
+		BudgetProductSKU:    new(""),
+		BudgetProductSkus:   []string{""},
+		BudgetScope:         new(""),
+		BudgetEntityName:    new(""),
+		BudgetAmount:        new(0),
+		PreventFurtherUsage: new(false),
+		BudgetAlerting:      &OrganizationBudgetAlerting{},
+		User:                new(""),
+		ExpiresAt:           new(""),
+	}
+	want := `github.OrganizationBudget{ID:"", BudgetType:"", BudgetProductSKU:"", BudgetProductSkus:[""], BudgetScope:"", BudgetEntityName:"", BudgetAmount:0, PreventFurtherUsage:false, BudgetAlerting:github.OrganizationBudgetAlerting{}, User:"", ExpiresAt:""}`
+	if got := v.String(); got != want {
+		t.Errorf("OrganizationBudget.String = %v, want %v", got, want)
+	}
+}
+
+func TestOrganizationListBudgets_String(t *testing.T) {
+	t.Parallel()
+	v := OrganizationListBudgets{
+		HasNextPage: new(false),
+		TotalCount:  new(0),
+	}
+	want := `github.OrganizationListBudgets{HasNextPage:false, TotalCount:0}`
+	if got := v.String(); got != want {
+		t.Errorf("OrganizationListBudgets.String = %v, want %v", got, want)
+	}
+}
+
 func TestPackage_String(t *testing.T) {
 	t.Parallel()
 	v := Package{

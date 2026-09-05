@@ -12,16 +12,19 @@ import (
 
 // BudgetScope constants represent the scope of the budget.
 const (
-	BudgetScopeEnterprise   = "enterprise"
-	BudgetScopeOrganization = "organization"
-	BudgetScopeRepository   = "repository"
-	BudgetScopeCostCenter   = "cost_center"
+	BudgetScopeEnterprise        = "enterprise"
+	BudgetScopeOrganization      = "organization"
+	BudgetScopeRepository        = "repository"
+	BudgetScopeCostCenter        = "cost_center"
+	BudgetScopeMultiUserCustomer = "multi_user_customer"
+	BudgetScopeUser              = "user"
 )
 
 // BudgetType constants represent the type of pricing for the budget.
 const (
 	BudgetTypeProductPricing = "ProductPricing"
 	BudgetTypeSkuPricing     = "SkuPricing"
+	BudgetTypeBundlePricing  = "BundlePricing"
 )
 
 // EnterpriseBudgetAlerting represents alerting settings for a GitHub enterprise budget.

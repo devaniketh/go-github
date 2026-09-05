@@ -27310,6 +27310,198 @@ func (o *Organization) GetWebCommitSignoffRequired() bool {
 	return *o.WebCommitSignoffRequired
 }
 
+// GetBudgetAlerting returns the BudgetAlerting field.
+func (o *OrganizationBudget) GetBudgetAlerting() *OrganizationBudgetAlerting {
+	if o == nil {
+		return nil
+	}
+	return o.BudgetAlerting
+}
+
+// GetBudgetAmount returns the BudgetAmount field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetBudgetAmount() int {
+	if o == nil || o.BudgetAmount == nil {
+		return 0
+	}
+	return *o.BudgetAmount
+}
+
+// GetBudgetEntityName returns the BudgetEntityName field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetBudgetEntityName() string {
+	if o == nil || o.BudgetEntityName == nil {
+		return ""
+	}
+	return *o.BudgetEntityName
+}
+
+// GetBudgetProductSKU returns the BudgetProductSKU field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetBudgetProductSKU() string {
+	if o == nil || o.BudgetProductSKU == nil {
+		return ""
+	}
+	return *o.BudgetProductSKU
+}
+
+// GetBudgetProductSkus returns the BudgetProductSkus slice if it's non-nil, nil otherwise.
+func (o *OrganizationBudget) GetBudgetProductSkus() []string {
+	if o == nil || o.BudgetProductSkus == nil {
+		return nil
+	}
+	return o.BudgetProductSkus
+}
+
+// GetBudgetScope returns the BudgetScope field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetBudgetScope() string {
+	if o == nil || o.BudgetScope == nil {
+		return ""
+	}
+	return *o.BudgetScope
+}
+
+// GetBudgetType returns the BudgetType field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetBudgetType() string {
+	if o == nil || o.BudgetType == nil {
+		return ""
+	}
+	return *o.BudgetType
+}
+
+// GetExpiresAt returns the ExpiresAt field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetExpiresAt() string {
+	if o == nil || o.ExpiresAt == nil {
+		return ""
+	}
+	return *o.ExpiresAt
+}
+
+// GetID returns the ID field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetID() string {
+	if o == nil || o.ID == nil {
+		return ""
+	}
+	return *o.ID
+}
+
+// GetPreventFurtherUsage returns the PreventFurtherUsage field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetPreventFurtherUsage() bool {
+	if o == nil || o.PreventFurtherUsage == nil {
+		return false
+	}
+	return *o.PreventFurtherUsage
+}
+
+// GetUser returns the User field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudget) GetUser() string {
+	if o == nil || o.User == nil {
+		return ""
+	}
+	return *o.User
+}
+
+// GetAlertRecipients returns the AlertRecipients slice if it's non-nil, nil otherwise.
+func (o *OrganizationBudgetAlerting) GetAlertRecipients() []string {
+	if o == nil || o.AlertRecipients == nil {
+		return nil
+	}
+	return o.AlertRecipients
+}
+
+// GetWillAlert returns the WillAlert field if it's non-nil, zero value otherwise.
+func (o *OrganizationBudgetAlerting) GetWillAlert() bool {
+	if o == nil || o.WillAlert == nil {
+		return false
+	}
+	return *o.WillAlert
+}
+
+// GetBudgetAlerting returns the BudgetAlerting field.
+func (o *OrganizationCreateBudget) GetBudgetAlerting() *OrganizationBudgetAlerting {
+	if o == nil {
+		return nil
+	}
+	return o.BudgetAlerting
+}
+
+// GetBudgetAmount returns the BudgetAmount field.
+func (o *OrganizationCreateBudget) GetBudgetAmount() int {
+	if o == nil {
+		return 0
+	}
+	return o.BudgetAmount
+}
+
+// GetBudgetEntityName returns the BudgetEntityName field if it's non-nil, zero value otherwise.
+func (o *OrganizationCreateBudget) GetBudgetEntityName() string {
+	if o == nil || o.BudgetEntityName == nil {
+		return ""
+	}
+	return *o.BudgetEntityName
+}
+
+// GetBudgetProductSKU returns the BudgetProductSKU field if it's non-nil, zero value otherwise.
+func (o *OrganizationCreateBudget) GetBudgetProductSKU() string {
+	if o == nil || o.BudgetProductSKU == nil {
+		return ""
+	}
+	return *o.BudgetProductSKU
+}
+
+// GetBudgetScope returns the BudgetScope field.
+func (o *OrganizationCreateBudget) GetBudgetScope() string {
+	if o == nil {
+		return ""
+	}
+	return o.BudgetScope
+}
+
+// GetBudgetType returns the BudgetType field.
+func (o *OrganizationCreateBudget) GetBudgetType() string {
+	if o == nil {
+		return ""
+	}
+	return o.BudgetType
+}
+
+// GetExpiresAt returns the ExpiresAt field if it's non-nil, zero value otherwise.
+func (o *OrganizationCreateBudget) GetExpiresAt() string {
+	if o == nil || o.ExpiresAt == nil {
+		return ""
+	}
+	return *o.ExpiresAt
+}
+
+// GetPreventFurtherUsage returns the PreventFurtherUsage field.
+func (o *OrganizationCreateBudget) GetPreventFurtherUsage() bool {
+	if o == nil {
+		return false
+	}
+	return o.PreventFurtherUsage
+}
+
+// GetUser returns the User field if it's non-nil, zero value otherwise.
+func (o *OrganizationCreateBudget) GetUser() string {
+	if o == nil || o.User == nil {
+		return ""
+	}
+	return *o.User
+}
+
+// GetBudget returns the Budget field.
+func (o *OrganizationCreateOrUpdateBudgetResponse) GetBudget() *OrganizationBudget {
+	if o == nil {
+		return nil
+	}
+	return o.Budget
+}
+
+// GetMessage returns the Message field.
+func (o *OrganizationCreateOrUpdateBudgetResponse) GetMessage() string {
+	if o == nil {
+		return ""
+	}
+	return o.Message
+}
+
 // GetProperties returns the Properties slice if it's non-nil, nil otherwise.
 func (o *OrganizationCustomPropertyValues) GetProperties() []*CustomPropertyValue {
 	if o == nil || o.Properties == nil {
@@ -27348,6 +27540,30 @@ func (o *OrganizationCustomRoles) GetTotalCount() int {
 		return 0
 	}
 	return *o.TotalCount
+}
+
+// GetBudgetID returns the BudgetID field if it's non-nil, zero value otherwise.
+func (o *OrganizationDeleteBudgetResponse) GetBudgetID() string {
+	if o == nil || o.BudgetID == nil {
+		return ""
+	}
+	return *o.BudgetID
+}
+
+// GetID returns the ID field if it's non-nil, zero value otherwise.
+func (o *OrganizationDeleteBudgetResponse) GetID() string {
+	if o == nil || o.ID == nil {
+		return ""
+	}
+	return *o.ID
+}
+
+// GetMessage returns the Message field.
+func (o *OrganizationDeleteBudgetResponse) GetMessage() string {
+	if o == nil {
+		return ""
+	}
+	return o.Message
 }
 
 // GetAction returns the Action field if it's non-nil, zero value otherwise.
@@ -27430,6 +27646,46 @@ func (o *OrganizationInstallations) GetTotalCount() int {
 	return *o.TotalCount
 }
 
+// GetBudgets returns the Budgets slice if it's non-nil, nil otherwise.
+func (o *OrganizationListBudgets) GetBudgets() []*OrganizationBudget {
+	if o == nil || o.Budgets == nil {
+		return nil
+	}
+	return o.Budgets
+}
+
+// GetHasNextPage returns the HasNextPage field if it's non-nil, zero value otherwise.
+func (o *OrganizationListBudgets) GetHasNextPage() bool {
+	if o == nil || o.HasNextPage == nil {
+		return false
+	}
+	return *o.HasNextPage
+}
+
+// GetTotalCount returns the TotalCount field if it's non-nil, zero value otherwise.
+func (o *OrganizationListBudgets) GetTotalCount() int {
+	if o == nil || o.TotalCount == nil {
+		return 0
+	}
+	return *o.TotalCount
+}
+
+// GetScope returns the Scope field.
+func (o *OrganizationListBudgetsOptions) GetScope() string {
+	if o == nil {
+		return ""
+	}
+	return o.Scope
+}
+
+// GetUser returns the User field.
+func (o *OrganizationListBudgetsOptions) GetUser() string {
+	if o == nil {
+		return ""
+	}
+	return o.User
+}
+
 // GetPerPage returns the PerPage field.
 func (o *OrganizationsListOptions) GetPerPage() int {
 	if o == nil {
@@ -27444,6 +27700,78 @@ func (o *OrganizationsListOptions) GetSince() int64 {
 		return 0
 	}
 	return o.Since
+}
+
+// GetBudgetAlerting returns the BudgetAlerting field.
+func (o *OrganizationUpdateBudget) GetBudgetAlerting() *OrganizationBudgetAlerting {
+	if o == nil {
+		return nil
+	}
+	return o.BudgetAlerting
+}
+
+// GetBudgetAmount returns the BudgetAmount field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetBudgetAmount() int {
+	if o == nil || o.BudgetAmount == nil {
+		return 0
+	}
+	return *o.BudgetAmount
+}
+
+// GetBudgetEntityName returns the BudgetEntityName field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetBudgetEntityName() string {
+	if o == nil || o.BudgetEntityName == nil {
+		return ""
+	}
+	return *o.BudgetEntityName
+}
+
+// GetBudgetProductSKU returns the BudgetProductSKU field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetBudgetProductSKU() string {
+	if o == nil || o.BudgetProductSKU == nil {
+		return ""
+	}
+	return *o.BudgetProductSKU
+}
+
+// GetBudgetScope returns the BudgetScope field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetBudgetScope() string {
+	if o == nil || o.BudgetScope == nil {
+		return ""
+	}
+	return *o.BudgetScope
+}
+
+// GetBudgetType returns the BudgetType field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetBudgetType() string {
+	if o == nil || o.BudgetType == nil {
+		return ""
+	}
+	return *o.BudgetType
+}
+
+// GetExpiresAt returns the ExpiresAt field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetExpiresAt() string {
+	if o == nil || o.ExpiresAt == nil {
+		return ""
+	}
+	return *o.ExpiresAt
+}
+
+// GetPreventFurtherUsage returns the PreventFurtherUsage field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetPreventFurtherUsage() bool {
+	if o == nil || o.PreventFurtherUsage == nil {
+		return false
+	}
+	return *o.PreventFurtherUsage
+}
+
+// GetUser returns the User field if it's non-nil, zero value otherwise.
+func (o *OrganizationUpdateBudget) GetUser() string {
+	if o == nil || o.User == nil {
+		return ""
+	}
+	return *o.User
 }
 
 // GetAction returns the Action field if it's non-nil, zero value otherwise.

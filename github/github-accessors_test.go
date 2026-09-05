@@ -34241,6 +34241,246 @@ func TestOrganization_GetWebCommitSignoffRequired(tt *testing.T) {
 	o.GetWebCommitSignoffRequired()
 }
 
+func TestOrganizationBudget_GetBudgetAlerting(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationBudget{}
+	o.GetBudgetAlerting()
+	o = nil
+	o.GetBudgetAlerting()
+}
+
+func TestOrganizationBudget_GetBudgetAmount(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue int
+	o := &OrganizationBudget{BudgetAmount: &zeroValue}
+	o.GetBudgetAmount()
+	o = &OrganizationBudget{}
+	o.GetBudgetAmount()
+	o = nil
+	o.GetBudgetAmount()
+}
+
+func TestOrganizationBudget_GetBudgetEntityName(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{BudgetEntityName: &zeroValue}
+	o.GetBudgetEntityName()
+	o = &OrganizationBudget{}
+	o.GetBudgetEntityName()
+	o = nil
+	o.GetBudgetEntityName()
+}
+
+func TestOrganizationBudget_GetBudgetProductSKU(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{BudgetProductSKU: &zeroValue}
+	o.GetBudgetProductSKU()
+	o = &OrganizationBudget{}
+	o.GetBudgetProductSKU()
+	o = nil
+	o.GetBudgetProductSKU()
+}
+
+func TestOrganizationBudget_GetBudgetProductSkus(tt *testing.T) {
+	tt.Parallel()
+	zeroValue := []string{}
+	o := &OrganizationBudget{BudgetProductSkus: zeroValue}
+	o.GetBudgetProductSkus()
+	o = &OrganizationBudget{}
+	o.GetBudgetProductSkus()
+	o = nil
+	o.GetBudgetProductSkus()
+}
+
+func TestOrganizationBudget_GetBudgetScope(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{BudgetScope: &zeroValue}
+	o.GetBudgetScope()
+	o = &OrganizationBudget{}
+	o.GetBudgetScope()
+	o = nil
+	o.GetBudgetScope()
+}
+
+func TestOrganizationBudget_GetBudgetType(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{BudgetType: &zeroValue}
+	o.GetBudgetType()
+	o = &OrganizationBudget{}
+	o.GetBudgetType()
+	o = nil
+	o.GetBudgetType()
+}
+
+func TestOrganizationBudget_GetExpiresAt(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{ExpiresAt: &zeroValue}
+	o.GetExpiresAt()
+	o = &OrganizationBudget{}
+	o.GetExpiresAt()
+	o = nil
+	o.GetExpiresAt()
+}
+
+func TestOrganizationBudget_GetID(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{ID: &zeroValue}
+	o.GetID()
+	o = &OrganizationBudget{}
+	o.GetID()
+	o = nil
+	o.GetID()
+}
+
+func TestOrganizationBudget_GetPreventFurtherUsage(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue bool
+	o := &OrganizationBudget{PreventFurtherUsage: &zeroValue}
+	o.GetPreventFurtherUsage()
+	o = &OrganizationBudget{}
+	o.GetPreventFurtherUsage()
+	o = nil
+	o.GetPreventFurtherUsage()
+}
+
+func TestOrganizationBudget_GetUser(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationBudget{User: &zeroValue}
+	o.GetUser()
+	o = &OrganizationBudget{}
+	o.GetUser()
+	o = nil
+	o.GetUser()
+}
+
+func TestOrganizationBudgetAlerting_GetAlertRecipients(tt *testing.T) {
+	tt.Parallel()
+	zeroValue := []string{}
+	o := &OrganizationBudgetAlerting{AlertRecipients: zeroValue}
+	o.GetAlertRecipients()
+	o = &OrganizationBudgetAlerting{}
+	o.GetAlertRecipients()
+	o = nil
+	o.GetAlertRecipients()
+}
+
+func TestOrganizationBudgetAlerting_GetWillAlert(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue bool
+	o := &OrganizationBudgetAlerting{WillAlert: &zeroValue}
+	o.GetWillAlert()
+	o = &OrganizationBudgetAlerting{}
+	o.GetWillAlert()
+	o = nil
+	o.GetWillAlert()
+}
+
+func TestOrganizationCreateBudget_GetBudgetAlerting(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateBudget{}
+	o.GetBudgetAlerting()
+	o = nil
+	o.GetBudgetAlerting()
+}
+
+func TestOrganizationCreateBudget_GetBudgetAmount(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateBudget{}
+	o.GetBudgetAmount()
+	o = nil
+	o.GetBudgetAmount()
+}
+
+func TestOrganizationCreateBudget_GetBudgetEntityName(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationCreateBudget{BudgetEntityName: &zeroValue}
+	o.GetBudgetEntityName()
+	o = &OrganizationCreateBudget{}
+	o.GetBudgetEntityName()
+	o = nil
+	o.GetBudgetEntityName()
+}
+
+func TestOrganizationCreateBudget_GetBudgetProductSKU(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationCreateBudget{BudgetProductSKU: &zeroValue}
+	o.GetBudgetProductSKU()
+	o = &OrganizationCreateBudget{}
+	o.GetBudgetProductSKU()
+	o = nil
+	o.GetBudgetProductSKU()
+}
+
+func TestOrganizationCreateBudget_GetBudgetScope(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateBudget{}
+	o.GetBudgetScope()
+	o = nil
+	o.GetBudgetScope()
+}
+
+func TestOrganizationCreateBudget_GetBudgetType(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateBudget{}
+	o.GetBudgetType()
+	o = nil
+	o.GetBudgetType()
+}
+
+func TestOrganizationCreateBudget_GetExpiresAt(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationCreateBudget{ExpiresAt: &zeroValue}
+	o.GetExpiresAt()
+	o = &OrganizationCreateBudget{}
+	o.GetExpiresAt()
+	o = nil
+	o.GetExpiresAt()
+}
+
+func TestOrganizationCreateBudget_GetPreventFurtherUsage(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateBudget{}
+	o.GetPreventFurtherUsage()
+	o = nil
+	o.GetPreventFurtherUsage()
+}
+
+func TestOrganizationCreateBudget_GetUser(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationCreateBudget{User: &zeroValue}
+	o.GetUser()
+	o = &OrganizationCreateBudget{}
+	o.GetUser()
+	o = nil
+	o.GetUser()
+}
+
+func TestOrganizationCreateOrUpdateBudgetResponse_GetBudget(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateOrUpdateBudgetResponse{}
+	o.GetBudget()
+	o = nil
+	o.GetBudget()
+}
+
+func TestOrganizationCreateOrUpdateBudgetResponse_GetMessage(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationCreateOrUpdateBudgetResponse{}
+	o.GetMessage()
+	o = nil
+	o.GetMessage()
+}
+
 func TestOrganizationCustomPropertyValues_GetProperties(tt *testing.T) {
 	tt.Parallel()
 	zeroValue := []*CustomPropertyValue{}
@@ -34294,6 +34534,36 @@ func TestOrganizationCustomRoles_GetTotalCount(tt *testing.T) {
 	o.GetTotalCount()
 	o = nil
 	o.GetTotalCount()
+}
+
+func TestOrganizationDeleteBudgetResponse_GetBudgetID(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationDeleteBudgetResponse{BudgetID: &zeroValue}
+	o.GetBudgetID()
+	o = &OrganizationDeleteBudgetResponse{}
+	o.GetBudgetID()
+	o = nil
+	o.GetBudgetID()
+}
+
+func TestOrganizationDeleteBudgetResponse_GetID(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationDeleteBudgetResponse{ID: &zeroValue}
+	o.GetID()
+	o = &OrganizationDeleteBudgetResponse{}
+	o.GetID()
+	o = nil
+	o.GetID()
+}
+
+func TestOrganizationDeleteBudgetResponse_GetMessage(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationDeleteBudgetResponse{}
+	o.GetMessage()
+	o = nil
+	o.GetMessage()
 }
 
 func TestOrganizationEvent_GetAction(tt *testing.T) {
@@ -34385,6 +34655,55 @@ func TestOrganizationInstallations_GetTotalCount(tt *testing.T) {
 	o.GetTotalCount()
 }
 
+func TestOrganizationListBudgets_GetBudgets(tt *testing.T) {
+	tt.Parallel()
+	zeroValue := []*OrganizationBudget{}
+	o := &OrganizationListBudgets{Budgets: zeroValue}
+	o.GetBudgets()
+	o = &OrganizationListBudgets{}
+	o.GetBudgets()
+	o = nil
+	o.GetBudgets()
+}
+
+func TestOrganizationListBudgets_GetHasNextPage(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue bool
+	o := &OrganizationListBudgets{HasNextPage: &zeroValue}
+	o.GetHasNextPage()
+	o = &OrganizationListBudgets{}
+	o.GetHasNextPage()
+	o = nil
+	o.GetHasNextPage()
+}
+
+func TestOrganizationListBudgets_GetTotalCount(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue int
+	o := &OrganizationListBudgets{TotalCount: &zeroValue}
+	o.GetTotalCount()
+	o = &OrganizationListBudgets{}
+	o.GetTotalCount()
+	o = nil
+	o.GetTotalCount()
+}
+
+func TestOrganizationListBudgetsOptions_GetScope(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationListBudgetsOptions{}
+	o.GetScope()
+	o = nil
+	o.GetScope()
+}
+
+func TestOrganizationListBudgetsOptions_GetUser(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationListBudgetsOptions{}
+	o.GetUser()
+	o = nil
+	o.GetUser()
+}
+
 func TestOrganizationsListOptions_GetPerPage(tt *testing.T) {
 	tt.Parallel()
 	o := &OrganizationsListOptions{}
@@ -34399,6 +34718,102 @@ func TestOrganizationsListOptions_GetSince(tt *testing.T) {
 	o.GetSince()
 	o = nil
 	o.GetSince()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetAlerting(tt *testing.T) {
+	tt.Parallel()
+	o := &OrganizationUpdateBudget{}
+	o.GetBudgetAlerting()
+	o = nil
+	o.GetBudgetAlerting()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetAmount(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue int
+	o := &OrganizationUpdateBudget{BudgetAmount: &zeroValue}
+	o.GetBudgetAmount()
+	o = &OrganizationUpdateBudget{}
+	o.GetBudgetAmount()
+	o = nil
+	o.GetBudgetAmount()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetEntityName(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{BudgetEntityName: &zeroValue}
+	o.GetBudgetEntityName()
+	o = &OrganizationUpdateBudget{}
+	o.GetBudgetEntityName()
+	o = nil
+	o.GetBudgetEntityName()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetProductSKU(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{BudgetProductSKU: &zeroValue}
+	o.GetBudgetProductSKU()
+	o = &OrganizationUpdateBudget{}
+	o.GetBudgetProductSKU()
+	o = nil
+	o.GetBudgetProductSKU()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetScope(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{BudgetScope: &zeroValue}
+	o.GetBudgetScope()
+	o = &OrganizationUpdateBudget{}
+	o.GetBudgetScope()
+	o = nil
+	o.GetBudgetScope()
+}
+
+func TestOrganizationUpdateBudget_GetBudgetType(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{BudgetType: &zeroValue}
+	o.GetBudgetType()
+	o = &OrganizationUpdateBudget{}
+	o.GetBudgetType()
+	o = nil
+	o.GetBudgetType()
+}
+
+func TestOrganizationUpdateBudget_GetExpiresAt(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{ExpiresAt: &zeroValue}
+	o.GetExpiresAt()
+	o = &OrganizationUpdateBudget{}
+	o.GetExpiresAt()
+	o = nil
+	o.GetExpiresAt()
+}
+
+func TestOrganizationUpdateBudget_GetPreventFurtherUsage(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue bool
+	o := &OrganizationUpdateBudget{PreventFurtherUsage: &zeroValue}
+	o.GetPreventFurtherUsage()
+	o = &OrganizationUpdateBudget{}
+	o.GetPreventFurtherUsage()
+	o = nil
+	o.GetPreventFurtherUsage()
+}
+
+func TestOrganizationUpdateBudget_GetUser(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	o := &OrganizationUpdateBudget{User: &zeroValue}
+	o.GetUser()
+	o = &OrganizationUpdateBudget{}
+	o.GetUser()
+	o = nil
+	o.GetUser()
 }
 
 func TestOrgBlockEvent_GetAction(tt *testing.T) {

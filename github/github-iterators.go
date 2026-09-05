@@ -1762,6 +1762,41 @@ func (s *AppsService) ListUserReposIter(ctx context.Context, id int64, opts *Lis
 	}
 }
 
+// ListOrganizationBudgetsIter returns an iterator that paginates through all results of ListOrganizationBudgets.
+func (s *BillingService) ListOrganizationBudgetsIter(ctx context.Context, org string, opts *OrganizationListBudgetsOptions) iter.Seq2[*OrganizationBudget, error] {
+	return func(yield func(*OrganizationBudget, error) bool) {
+		// Create a copy of opts to avoid mutating the caller's struct
+		if opts == nil {
+			opts = &OrganizationListBudgetsOptions{}
+		} else {
+			opts = new(*opts)
+		}
+
+		for {
+			results, resp, err := s.ListOrganizationBudgets(ctx, org, opts)
+			if err != nil {
+				yield(nil, err)
+				return
+			}
+
+			var iterItems []*OrganizationBudget
+			if results != nil {
+				iterItems = results.Budgets
+			}
+			for _, item := range iterItems {
+				if !yield(item, nil) {
+					return
+				}
+			}
+
+			if resp.NextPage == 0 {
+				break
+			}
+			opts.ListOptions.Page = resp.NextPage
+		}
+	}
+}
+
 // ListCheckRunAnnotationsIter returns an iterator that paginates through all results of ListCheckRunAnnotations.
 func (s *ChecksService) ListCheckRunAnnotationsIter(ctx context.Context, owner string, repo string, checkRunID int64, opts *ListOptions) iter.Seq2[*CheckRunAnnotation, error] {
 	return func(yield func(*CheckRunAnnotation, error) bool) {
